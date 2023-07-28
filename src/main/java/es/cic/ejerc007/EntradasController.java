@@ -1,7 +1,9 @@
 package es.cic.ejerc007;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,8 +26,10 @@ public class EntradasController {
 		entradasService.modificar(entrada.getId());
 	}
 	
-	public void borrarEntrada(EntradaDTO entrada) {
+	@DeleteMapping("/entradas/borrar")
+	public String borrarEntrada(EntradaDTO entrada) {
 		entradasService.borrarEntrada(entrada.getId());
+		return "Entrada borrada";
 	}
 
 }
