@@ -9,4 +9,29 @@ public class SalaDTO {
 	public SalaDTO() {
 	}
 
+	public PeliculaDTO getPelicula() {
+		return pelicula;
+	}
+
+	public void setPelicula(PeliculaDTO pelicula) {
+		this.pelicula = pelicula;
+	}
+
+	public SesionDTO getSesion() {
+		return sesion;
+	}
+
+	public void setSesion(SesionDTO sesion) {
+		this.sesion = sesion;
+	}
+
+	public int getButaca() {
+		return butaca;
+	}
+
+	public void setButaca(int butaca) {
+		this.butaca = butaca;
+	}
+
+	
 }
