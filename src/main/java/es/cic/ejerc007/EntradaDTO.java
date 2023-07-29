@@ -5,7 +5,7 @@ public class EntradaDTO {
 	private int id;
 	private SalaDTO sala;
 	private SesionDTO sesion;
-	private PeliculaDTO pelicula;
+	private String pelicula;
 	private final int precio = 5;
 	private int totalDeEntradas;
 
@@ -13,12 +13,13 @@ public class EntradaDTO {
 
 	}
 	
-	public EntradaDTO(SalaDTO sala, SesionDTO sesion, PeliculaDTO pelicula, int totalDeEntradas) {
+	public EntradaDTO(SalaDTO sala, SesionDTO sesion, String pelicula, int totalDeEntradas) {
 		this.sala = sala;
 		this.sesion = sesion;
 		this.pelicula = pelicula;
 		this.totalDeEntradas = totalDeEntradas;
 	}
+	
 
 	public int getId() {
 		return id;
@@ -40,12 +41,16 @@ public class EntradaDTO {
 		this.sesion = sesion;
 	}
 
-	public PeliculaDTO getPelicula() {
+	public String getPelicula() {
 		return pelicula;
 	}
 
-	public void setPelicula(PeliculaDTO pelicula) {
+	public void setPelicula(String pelicula) {
 		this.pelicula = pelicula;
+	}
+	
+	public int getPrecio() {
+		return precio;
 	}
 
 	public int getTotalDeEntradas() {

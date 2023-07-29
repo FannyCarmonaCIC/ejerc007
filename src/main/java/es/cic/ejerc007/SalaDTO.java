@@ -1,36 +1,36 @@
 package es.cic.ejerc007;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SalaDTO {
 	
-	private PeliculaDTO pelicula;
-	private SesionDTO sesion;
-	private int butaca;
+	private String pelicula;
+	private List<SesionDTO> sesiones;
+	private int numeroDeButacas;
 
 	public SalaDTO() {
+		sesiones = new ArrayList<SesionDTO>();
 	}
 
-	public PeliculaDTO getPelicula() {
+	public String getPelicula() {
 		return pelicula;
 	}
 
-	public void setPelicula(PeliculaDTO pelicula) {
-		this.pelicula = pelicula;
-	}
-
-	public SesionDTO getSesion() {
-		return sesion;
-	}
-
-	public void setSesion(SesionDTO sesion) {
-		this.sesion = sesion;
-	}
-
 	public int getButaca() {
-		return butaca;
+		return numeroDeButacas;
 	}
 
 	public void setButaca(int butaca) {
-		this.butaca = butaca;
+		this.numeroDeButacas = butaca;
+	}
+
+	public List<SesionDTO> getSesiones() {
+		return sesiones;
+	}
+
+	public void setSesiones(List<SesionDTO> sesiones) {
+		this.sesiones = sesiones;
 	}
 
 	

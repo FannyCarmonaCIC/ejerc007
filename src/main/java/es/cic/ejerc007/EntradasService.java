@@ -32,5 +32,13 @@ public class EntradasService {
 		entradaOptional.ifPresent((entrada) -> entradas.remove(entrada));
 		
 	}
+	
+	public List<EntradaDTO> consultarEntradas(){
+		return entradas;
+	}
+	
+	public int calcularPrecioTotal(int numeroDeEntradas) {
+		return 5 * numeroDeEntradas;
+	}
 
 }

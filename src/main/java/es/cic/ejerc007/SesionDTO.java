@@ -2,11 +2,41 @@ package es.cic.ejerc007;
 
 public class SesionDTO {
 	
-	private final String SESION1 = "17h";
-	private final String SESION2 = "20h";
-	private final String SESION3 = "22h30";
+	private final String sesion1 = "17h";
+	private final String sesion2 = "20h";
+	private final String sesion3 = "22h30";
+	private SalaDTO sala;
+	private int numeroDeButacasOcupadas;
 
 	public SesionDTO() {
+	}
+	
+	
+
+	public String getSesion1() {
+		return sesion1;
+	}
+
+
+
+	public String getSesion2() {
+		return sesion2;
+	}
+
+
+
+	public String getSesion3() {
+		return sesion3;
+	}
+
+
+
+	public int getNumeroDeButacasOcupadas() {
+		return numeroDeButacasOcupadas;
+	}
+
+	public void setNumeroDeButacasOcupadas(int numeroDeButacasOcupadas) {
+		this.numeroDeButacasOcupadas = numeroDeButacasOcupadas;
 	}
 
 }
