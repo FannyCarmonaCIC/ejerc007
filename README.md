@@ -20,3 +20,12 @@
     • Se debe poder comprobar las butacas libres de las salas.
     • Ver el total por cine, sala o proyección (9 proyecciones).
     • Comprobar las ventas realizadas
+    
+    
+**Cómo crear una entrada usando curl**
+
+- curl -X POST -H 'Content-Type: application/json' -d '{"id": 1,"SalaDTO": "null","SesionDTO": "null","pelicula": "Indiana Jones","totalDeEntradas": 3}' http://localhost:8080/crearentrada
+
+**Cómo ver la lista de entradas:**
+
+- curl -X GET http://localhost:8080/entradas/listar

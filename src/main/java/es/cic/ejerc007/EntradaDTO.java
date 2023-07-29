@@ -10,6 +10,7 @@ public class EntradaDTO {
 	private int totalDeEntradas;
 
 	public EntradaDTO(int id, SalaDTO sala, SesionDTO sesion, String pelicula, int totalDeEntradas) {
+		this.id = id;
 		this.sala = sala;
 		this.sesion = sesion;
 		this.pelicula = pelicula;
