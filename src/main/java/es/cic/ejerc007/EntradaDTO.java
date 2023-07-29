@@ -9,11 +9,7 @@ public class EntradaDTO {
 	private final int precio = 5;
 	private int totalDeEntradas;
 
-	public EntradaDTO() {	
-
-	}
-	
-	public EntradaDTO(SalaDTO sala, SesionDTO sesion, String pelicula, int totalDeEntradas) {
+	public EntradaDTO(int id, SalaDTO sala, SesionDTO sesion, String pelicula, int totalDeEntradas) {
 		this.sala = sala;
 		this.sesion = sesion;
 		this.pelicula = pelicula;
@@ -23,6 +19,10 @@ public class EntradaDTO {
 
 	public int getId() {
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public SalaDTO getSala() {

@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EntradasController {
 	
-	@Autowired
+	
 	private EntradasService entradasService;
 
-	public EntradasController() {
+	@Autowired
+	public EntradasController(EntradasService entradasService) {
+		this.entradasService = entradasService;
 	}
 	
 	@PostMapping("/crearentrada")
