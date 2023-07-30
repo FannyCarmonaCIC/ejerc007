@@ -17,7 +17,13 @@ public class EntradasService {
 
 	public void crear(EntradaDTO entrada) {
 		double totalPagado = entrada.getPrecio() * entrada.getTotalDeEntradas();
-		entrada.setTotalPagado(totalPagado);
+		
+		if(entrada.getTotalDeEntradas() >= 5) {
+			totalPagado = (totalPagado * 10)/100;
+			entrada.setTotalPagado(totalPagado);
+		} else {
+			entrada.setTotalPagado(totalPagado);
+		}
 		entradas.add(entrada);
 	}
 
