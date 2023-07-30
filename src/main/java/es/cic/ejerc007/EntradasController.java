@@ -35,10 +35,7 @@ public class EntradasController {
 		entradasService.borrarEntrada(entrada.getId());
 		return "Entrada borrada";
 	}
-	
-	public int calcularPrecioTotal(EntradaDTO entrada) {
-		return entradasService.calcularPrecioTotal(entrada.getTotalDeEntradas());
-	}
+
 	
 	@GetMapping("/entradas/listar")
 	public List<EntradaDTO> consultarEntradas(){

@@ -8,6 +8,7 @@ public class EntradaDTO {
 	private String pelicula;
 	private final int precio = 5;
 	private int totalDeEntradas;
+	private double totalPagado;
 
 	public EntradaDTO(int id, SalaDTO sala, SesionDTO sesion, String pelicula, int totalDeEntradas) {
 		this.id = id;
@@ -60,6 +61,16 @@ public class EntradaDTO {
 
 	public void setTotalDeEntradas(int totalDeEntradas) {
 		this.totalDeEntradas = totalDeEntradas;
+	}
+
+
+	public double getTotalPagado() {
+		return totalPagado;
+	}
+
+
+	public void setTotalPagado(double totalPagado) {
+		this.totalPagado = totalPagado;
 	}
 	
 	

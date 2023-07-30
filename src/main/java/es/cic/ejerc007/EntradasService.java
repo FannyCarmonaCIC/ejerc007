@@ -16,6 +16,8 @@ public class EntradasService {
 	}
 
 	public void crear(EntradaDTO entrada) {
+		double totalPagado = entrada.getPrecio() * entrada.getTotalDeEntradas();
+		entrada.setTotalPagado(totalPagado);
 		entradas.add(entrada);
 	}
 
@@ -37,8 +39,5 @@ public class EntradasService {
 		return entradas;
 	}
 	
-	public int calcularPrecioTotal(int numeroDeEntradas) {
-		return 5 * numeroDeEntradas;
-	}
 
 }
