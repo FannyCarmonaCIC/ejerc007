@@ -36,9 +36,9 @@
 
 No tengo claro si tiene sentido meter la lista de sesiones. No sé cómo resolver esa parte.
 
-## Cosas que faltan
+### Cosas que faltan
 
-[] Calcular las butacas libres
-[] Completar el método modificarEntrada
-[] Calcular el total vendido por proyección
-[] Calcular las ventas realizadas en total
+- [ ] Calcular las butacas libres
+- [ ] Completar el método modificarEntrada
+- [ ] Calcular el total vendido por proyección
+- [ ] Calcular las ventas realizadas en total
