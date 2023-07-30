@@ -31,6 +31,18 @@ public class SesionDTO {
 
 
 
+	public SalaDTO getSala() {
+		return sala;
+	}
+
+
+
+	public void setSala(SalaDTO sala) {
+		this.sala = sala;
+	}
+
+
+
 	public int getNumeroDeButacasOcupadas() {
 		return numeroDeButacasOcupadas;
 	}
