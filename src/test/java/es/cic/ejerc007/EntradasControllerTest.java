@@ -13,7 +13,7 @@ class EntradasControllerTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		entrada = new EntradaDTO(1, null, null, 3);
+		entrada = new EntradaDTO(1, null, null);
 	}
 
 	@Test
