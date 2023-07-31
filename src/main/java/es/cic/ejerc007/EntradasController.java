@@ -21,8 +21,10 @@ public class EntradasController {
 	}
 	
 	@PostMapping("/crearentrada")
-	public String crear(@RequestBody EntradaDTO entrada) {
-		entradasService.crear(entrada);
+	public String crear(@RequestBody EntradaDTO entrada, int numeroDeEntradas) {
+
+			entradasService.crear(entrada, numeroDeEntradas);
+
 		return "Entrada creada";
 	}
 	

@@ -13,13 +13,13 @@ class EntradasControllerTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		entrada = new EntradaDTO(1, null, null, null, 3);
+		entrada = new EntradaDTO(1, null, null, 3);
 	}
 
 	@Test
 	void testCrearEntrada() {
 		EntradasController ec = new EntradasController(new EntradasService());
-		ec.crear(entrada);
+		ec.crear(entrada, 5);
 		List<EntradaDTO> listaDeEntradas = ec.consultarEntradas();
 		boolean resultado = listaDeEntradas.contains(entrada);
 		
