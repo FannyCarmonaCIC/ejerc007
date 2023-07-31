@@ -15,23 +15,16 @@ public class EntradasService {
 		entradas = new ArrayList<>();
 	}
 
-	public void crear(EntradaDTO entrada, int numeroDeEntradas) {
+	public void crear(EntradaDTO entrada) {
+		double totalPagado = entrada.getPrecio() * entrada.getTotalDeEntradas();
 		
-		double totalPagado = entrada.getPrecio() * numeroDeEntradas;
-		int contadorDeEntradas = 0;
-		
-		if(numeroDeEntradas >= 5) {
+		if(entrada.getTotalDeEntradas() >= 5) {
 			totalPagado = (totalPagado * 10)/100;
 			entrada.setTotalPagado(totalPagado);
 		} else {
 			entrada.setTotalPagado(totalPagado);
 		}
-		
-		while(contadorDeEntradas <= numeroDeEntradas) {
-			entradas.add(entrada);
-			contadorDeEntradas++;
-		}
-
+		entradas.add(entrada);
 	}
 
 	public EntradaDTO modificar(int id) {

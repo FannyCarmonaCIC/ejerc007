@@ -3,15 +3,19 @@ package es.cic.ejerc007;
 public class EntradaDTO {
 	
 	private int id;
+	private SalaDTO sala;
 	private SesionDTO sesion;
 	private String pelicula;
 	private final int precio = 5;
+	private int totalDeEntradas;
 	private double totalPagado;
 
-	public EntradaDTO(int id, SesionDTO sesion, String pelicula) {
+	public EntradaDTO(int id, SalaDTO sala, SesionDTO sesion, String pelicula, int totalDeEntradas) {
 		this.id = id;
+		this.sala = sala;
 		this.sesion = sesion;
 		this.pelicula = pelicula;
+		this.totalDeEntradas = totalDeEntradas;
 	}
 	
 
@@ -21,6 +25,14 @@ public class EntradaDTO {
 	
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public SalaDTO getSala() {
+		return sala;
+	}
+
+	public void setSala(SalaDTO sala) {
+		this.sala = sala;
 	}
 
 	public SesionDTO getSesion() {
@@ -43,6 +55,15 @@ public class EntradaDTO {
 		return precio;
 	}
 
+	public int getTotalDeEntradas() {
+		return totalDeEntradas;
+	}
+
+	public void setTotalDeEntradas(int totalDeEntradas) {
+		this.totalDeEntradas = totalDeEntradas;
+	}
+
+
 	public double getTotalPagado() {
 		return totalPagado;
 	}
@@ -51,6 +72,7 @@ public class EntradaDTO {
 	public void setTotalPagado(double totalPagado) {
 		this.totalPagado = totalPagado;
 	}
+	
 	
 
 }
