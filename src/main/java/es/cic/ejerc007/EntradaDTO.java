@@ -6,14 +6,12 @@ public class EntradaDTO {
 	private SesionDTO sesion;
 	private String pelicula;
 	private final int precio = 5;
-	private int totalDeEntradas;
 	private double totalPagado;
 
-	public EntradaDTO(int id, SesionDTO sesion, String pelicula, int totalDeEntradas) {
+	public EntradaDTO(int id, SesionDTO sesion, String pelicula) {
 		this.id = id;
 		this.sesion = sesion;
 		this.pelicula = pelicula;
-		this.totalDeEntradas = totalDeEntradas;
 	}
 	
 
@@ -44,15 +42,6 @@ public class EntradaDTO {
 	public int getPrecio() {
 		return precio;
 	}
-
-	public int getTotalDeEntradas() {
-		return totalDeEntradas;
-	}
-
-	public void setTotalDeEntradas(int totalDeEntradas) {
-		this.totalDeEntradas = totalDeEntradas;
-	}
-
 
 	public double getTotalPagado() {
 		return totalPagado;
